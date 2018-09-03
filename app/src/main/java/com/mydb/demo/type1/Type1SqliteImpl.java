@@ -10,12 +10,22 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 一个数据库 一张表
+ * 方式1 使用
+ * db.execSQL() -- 只用于创建表使用
+ * db.insert()
+ * db.delete()
+ * db.update()
+ * db.query()
+ *
+ */
 public class Type1SqliteImpl extends SQLiteOpenHelper {
 
     //**********************************基本设置**********************************
     private static final int DB_VERSION = 1;//数据库版本 默认都是1,涉及到更新需要修改
-    private static final String DB_NAME = "type1_qrcode_list.db";//数据库文件名
-    private static final String DB_TABLE_NAME = "type1demo";//表名
+    private static final String DB_NAME = "type1.db";//数据库文件名
+    private static final String DB_TABLE_NAME = "type1_table1";//表名
 
     /************************************表-字段属性 开始*************************************
      */
@@ -131,7 +141,7 @@ public class Type1SqliteImpl extends SQLiteOpenHelper {
      * @return
      */
     public PersonBean searchOne(String name) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         PersonBean bean = new PersonBean();
         Cursor cursor = db.query(DB_TABLE_NAME,
                 new String[]{
@@ -169,7 +179,7 @@ public class Type1SqliteImpl extends SQLiteOpenHelper {
     }
 
     public List<PersonBean> searchAll() {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         List<PersonBean> list = new ArrayList<>();
 
         Cursor cursor = db.query(DB_TABLE_NAME,
@@ -214,7 +224,7 @@ public class Type1SqliteImpl extends SQLiteOpenHelper {
     }
 
     public List<String> searchAll2() {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         List<String> list = new ArrayList<>();
 
         Cursor cursor = db.query(DB_TABLE_NAME,
