@@ -17,6 +17,9 @@ import com.mydb.demo.type1.Type1SqliteImpl;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 原生方式1：一个类全部实现
+ */
 public class Type1Activity extends AppCompatActivity implements View.OnClickListener {
     //=========================控件===============================
     RecyclerView recyclerView;

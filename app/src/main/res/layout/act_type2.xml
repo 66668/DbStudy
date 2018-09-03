@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一个数据库三张表" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User表：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="username"
+                    android:inputType="text"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="password"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="phone"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_userId"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="userId"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_age"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="age"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="以userId操作数据库" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btn_add1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="添加数据"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_delete1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="删除 4"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_update1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="修改一条"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_select1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+
+                    android:layout_weight="1"
+                    android:text="查询所有" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOTE表：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <EditText
+                    android:id="@+id/et_noteName2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="noteName"
+                    android:inputType="text"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_userId2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="userId"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/et_content2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="content"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="以userId操作数据库" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btn_add2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="添加数据"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_delete2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="删除一条"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_update2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="修改一条"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_select2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="查询所有"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="统计：" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

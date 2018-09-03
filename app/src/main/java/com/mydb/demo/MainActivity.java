@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
 
         listData.add("原生方式1：一个类全部实现");
-        listData.add("原生方式2：");
+        listData.add("原生方式2：完全sqlite语句实现");
         listData.add("原生方式3：");
     }
 
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
                     case 1:
+                        Intent intent2 = new Intent(MainActivity.this, Type2Activity.class);
+                        startActivity(intent2);
                         break;
                 }
             }
