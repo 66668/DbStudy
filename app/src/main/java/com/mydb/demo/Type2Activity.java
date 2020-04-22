@@ -238,7 +238,6 @@ public class Type2Activity extends BaseAct implements View.OnClickListener {
                 SqlDB.beginTransaction();
                 try {
                     SqlDB.getInstance().execSQL(SQLString.USER_UPDATE, username, password, phone, age, userId1);
-
                     SqlDB.setTransactionSuccessful();
                 } catch (Exception e) {
                     e.printStackTrace();
